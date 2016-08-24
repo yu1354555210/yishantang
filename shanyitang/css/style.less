@@ -293,3 +293,209 @@ input:focus {
         font-size: 1.25rem;
     }
 }
+#header{
+    position: relative;
+    height: 3.125rem;
+    line-height: 3.125rem;
+    background-color: #1e79e0;
+    overflow: hidden;
+    .mui-action-back{
+        color: #fff;
+        font-size: 1.666667rem;
+        margin-top: 0.725rem;
+    }
+    .mui-title{
+        line-height: 3.225rem;
+        font-size: 1.25rem;
+        color: #fff;
+    }
+    .iconfont{
+        font-size: 1.666667rem;
+        color: #fff;
+        margin-top: 0.625rem;
+    }
+}
+.search_box{
+    clear: both;
+    height: 3.583333rem;
+    overflow: hidden;
+    .search_area{
+        background-color: #f4f4f4;
+        padding: 0.625rem 0.833333rem;
+        overflow: hidden;
+        .search_border{
+            border: 1px solid #d1d1d1;
+            overflow: hidden;
+            .radius(0.208333rem);
+            border-right: none;
+            background-color: #fff;
+        }
+    }
+    .select_box{
+        .fl;
+        width: 7.916667rem;
+        height: 2.166667rem;
+        line-height: 2.166667rem;
+        text-align: center;
+        position: relative;
+        &:after{
+            right: 1rem;
+        }
+        &>.mui-btn{
+            padding: 0 0.208333rem;
+            height: 100%;
+            line-height: 1;
+            background-color: #f3f3f3;
+            font-size: 1rem;
+            color: #696969;
+            text-align: center !important;
+            margin-top: 0;
+        }
+    }
+    .search_name{
+        .fl;
+        width: 12.833333rem;
+        height: 2.166667rem;
+        line-height: 2.166667rem;
+        text-indent: 1em;
+        color: #acacac;
+        font-size: 1.083333rem;
+        background-color: #fff;
+        padding: 0;
+        text-align: left;
+        margin: 0;
+        .radius(0);
+    }
+    .search_btn{
+        .fr;
+        width: 3.916667rem;
+        height: 2.166667rem;
+        line-height: 2.166667rem;
+        text-align: center;
+        font-size: 1.083333rem;
+        color: #ffffff;
+        background-color: #65a2e6;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+.select_nav{
+    height: 3.541667rem;
+    overflow: hidden;
+    border-bottom: 0.5rem solid #f7f7f7;
+    ul{
+        padding: 0.5rem 0;
+    }
+    li{
+        -moz-box-flex: 4;
+        -webkit-box-flex: 4;
+        box-flex: 4;
+        text-align: center;
+        position: relative;
+        line-height: 2.56667rem;
+        text-align: center;
+        padding: 0 0.833333rem;
+        &>select{
+            font-size: 1rem;
+            color: #696969;
+        }
+        .icon-xiasanjiao{
+            right: 2.833333rem;
+        }
+    }
+}
+.select_icon{
+    &:after{
+        position: absolute;
+        right: 1.5rem;
+        top: 0.8rem;
+        content: "";
+        display: block;
+        width: 0.583333rem;
+        height: 0.541667rem;
+        background-image: url(../img/xiasanjiao.png);
+        .bgSize;
+        z-index: 2;
+    }
+}
+.doctor_list_box{
+    overflow: hidden;
+    .doctor_list{
+        overflow: hidden;
+        border-bottom: 1px solid #e7e7e7;
+        padding: 0.416667rem 1.333333rem;
+        .doctor_img{
+            .fl;
+            width: 5.375rem;
+            margin-right: 1.166667rem;
+            img{
+                .radius(50%);
+                width: 5.375rem;
+                height: 5.375rem;
+            }
+            span{
+                display: block;
+                text-align: center;
+                color: #333333;
+                font-size: 1.083333rem;
+                margin-top: 0.416667rem;
+            }
+        }
+        .doctor_con{
+            .fl;
+            width: 16.875rem;
+            h3{
+                font-size: 1.291667rem;
+                font-weight: normal;
+                line-height: 2rem;
+                a{
+                    color: #333333;
+                }
+            }
+            p{
+                font-size:1.041667rem;
+                color: #666666;
+                line-height: 1.25rem;
+                height: 3.541667rem;
+                overflow: hidden;
+            }
+            .doctor_other{
+                height: 1.458333rem;
+                line-height: 1.458333rem;
+                .doctor_address{
+                    color: #666666;
+                    font-size: 0.8rem;
+                    .fl;
+                    width: 7.166667rem;
+                    .icon-weizhi{
+                        margin-right: 0.5rem;
+                        font-size: 1rem;
+                    }
+                }
+                .doctor_money{
+                    .fl;
+                    width: 5.0rem;
+                    color: #f7521f;
+                    font-size: 0.8rem;
+                    line-height: 1.65rem;
+                }
+                .doctor_btn{
+                    .fr;
+                    a{
+                        font-size: 0.8rem;
+                        display: block;
+                        text-align: center;
+                        color: #fff;
+                        background-color: #65a2e6;
+                        width: 4.583333rem;
+                        line-height: 1.75rem;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
