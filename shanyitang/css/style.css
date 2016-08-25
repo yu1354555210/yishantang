@@ -487,7 +487,7 @@ input:focus {
   overflow: hidden;
   position: relative;
 }
-.person_head > .mui-btn-success {
+.person_head > .mui-btn {
   background-color: #69c380;
   font-size: 0.875rem;
   line-height: 1.916667rem;
@@ -592,4 +592,55 @@ input:focus {
 .data_item li .mui-navigate-right:after {
   font-size: 1.458333rem;
   color: #787878;
+}
+.person_head_easy {
+  border-bottom-width: 1px;
+}
+.person_head_easy dl {
+  padding: 0.625rem 0;
+}
+.person_head_easy dl dd .person_dd_name {
+  line-height: 3.0rem;
+}
+.person_head_easy dl dd .person_dd_other {
+  color: #666666;
+  font-size: 1.0rem;
+  margin-right: 0.583333rem;
+}
+.person_head_easy .mui-btn {
+  background-color: #4182e8;
+  padding: 0 1.25rem;
+}
+.mui_control_item .mui-table-view-cell {
+  height: 3.083333rem;
+  line-height: 3.083333rem;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 0.833333rem;
+  color: #333333;
+  font-size: 0.875rem;
+}
+.mui_control_item .mui-table-view-cell:after {
+  height: 0;
+}
+.mui_control_item .mui-table-view-cell span {
+  margin-right: 0.833333rem;
+}
+.mui_tab {
+  background-color: #fff;
+}
+.mui_tab .mui-control-item {
+  line-height: 3.333333rem;
+}
+.mui_tab a {
+  line-height: 3.333333rem;
+  font-size: 1.0rem;
+  color: #666666;
+}
+.mui_tab a.mui-active {
+  color: #1e79e0;
+  border-bottom-color: #1e79e0;
+}
+.bgccc {
+  background-color: #f8f8f8;
 }
