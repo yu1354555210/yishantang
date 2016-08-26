@@ -534,7 +534,7 @@ input:focus {
         padding-top: 0;
         padding-bottom: 0;
     }
-    dl{
+    &>dl{
         padding-top: 2rem;
         padding-bottom: 1.5rem;
         width: 18.125rem;
@@ -810,5 +810,87 @@ input:focus {
     .mui-btn-grey{
         background-color: #f8f8f8;
         color: #999999;
+    }
+}
+.mui_control_item_hd .mui-table-view-cell{
+    background-color: #fff;
+}
+.mui_tab_hd.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+    border-bottom-width: 0.208333rem;
+}
+.person_head_patient{
+    border-top: 0;
+    position: relative;
+    padding: 0;
+    border-bottom: 0.625rem solid #f8f8f8;
+    &:before{
+        background-color: #e9e9e9;
+        top: 0;
+        content: "";
+        height: 1px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        transform: scaleY(0.5);
+    }
+    dl{
+        margin-left: .625rem;
+    }
+    .mui-table-view-cell{
+        text-align: center;
+        &.mui-active{
+            background-color: #fff;
+        }
+        .mui-navigate-right{
+            color: #a6c9f0;
+            padding: 0.833333rem 0;
+            font-size: 0.875rem;
+            border-bottom: 1px solid #e9e9e9;
+            &:after{
+                right: auto;
+                color: #a6c9f0;
+            }
+        }
+    }
+    .mui-table-view-cell.mui-collapse{
+        .mui-collapse-content{
+            padding: 0.833333rem 1.25rem;
+            overflow: hidden;
+            background-color: #f8f8f8;
+            dl{
+                margin-bottom: 0.416667rem;
+            }
+            dt{
+                color: #84b9f3;
+                font-size: 1rem;
+                margin-bottom: 0.625rem;
+                width: 100%;
+                text-align: left;
+            }
+            dd{
+                text-align: left;
+                color: #333333;
+                font-size: 0.875rem;
+                line-height: 1.666667rem;
+                span{
+                    margin-right: 0.5rem;
+                }
+            }
+            &>a{
+                color: #a6c9f0;
+                font-size: 0.875rem;
+                position: absolute;
+                right: 1.458333rem;
+                bottom: 0.75rem;
+            }
+            &:after{
+                height: 0;
+            }
+        }
+    }
+}
+.patient_nav{
+    .select_icon:after{
+        right: 25%;
     }
 }
