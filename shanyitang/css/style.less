@@ -137,9 +137,6 @@ input:focus {
     border-bottom: 1px solid #3299f3;
     ul {
         li {
-            -moz-box-flex: 3;
-            -webkit-box-flex: 3;
-            box-flex: 3;
             text-align: center;
             font-size: 1.25rem;
             position: relative;
@@ -218,10 +215,6 @@ input:focus {
     padding: 0.75rem 0;
     height: 7.916667rem;
     li {
-        -moz-box-flex: 3;
-        -webkit-box-flex: 3;
-        box-flex: 3;
-        text-align: center;
         font-size: 1.166667rem;
         position: relative;
         a {
@@ -245,6 +238,14 @@ input:focus {
     display: -moz-box;
     display: -webkit-box;
     display: box;
+    &>li{
+        -moz-box-flex: 3;
+        -webkit-box-flex: 3;
+        box-flex: 3;
+        text-align: center;
+        font-size: 1.166667rem;
+        position: relative;
+    }
 }
 
 .other_list {
@@ -731,6 +732,16 @@ input:focus {
                 }
             }
         }
+        .mui_view_name{
+            .fr;
+            color: #999999;
+            font-size: 0.875rem;
+            margin-right: 0.625rem;
+            span{
+                margin-left: 0.625rem;
+                .fl;
+            }
+        }
     }
     &:last-child{
         margin-bottom: 2.083333rem;
@@ -978,6 +989,7 @@ input:focus {
 .doctor_details_head{
     padding: 1.125rem 0.833333rem 0.75rem;
     overflow: hidden;
+    position: relative;
     figure{
         .fl;
         width: 5.333333rem;
@@ -1022,6 +1034,21 @@ input:focus {
         }
     }
 }
+.doctor_details_head_yuyue{
+    padding-bottom: 1.1rem;
+    .doctor_expense{
+        position: absolute;
+        right: 0.75rem;
+        bottom: 0.2rem;
+        color: #f7521f;
+        font-size: 0.708333rem;
+        i{
+            font-size: 1.041667rem;
+            color: #65a2e6;
+            margin-right: 0.5rem;
+        }
+    }
+}
 .doctor_details_tit{
     height: 2.666667rem;
     line-height: 2.666667rem;
@@ -1030,9 +1057,6 @@ input:focus {
     font-size: 0.708333rem;
     background-color: #e8e8e8;
     li{
-        -moz-box-flex: 3;
-        -webkit-box-flex: 3;
-        box-flex: 3;
         position: relative;
         span{
             color: #f7521f;
@@ -1057,19 +1081,42 @@ input:focus {
     }
 }
 .doctor_details_tab2{
-    ul{
-        width: 22.083333rem;
-        margin: 0 auto;
-        height: 4.583333rem;
-        line-height: 4.583333rem;
-        text-align: center;
-        li{
+    text-align: center;
+    .mui-segmented-control{
+        padding: 1.125rem 0;
+        overflow: hidden;
+        border: 0;
+        &>div{
+            display: inline-block;
+        }
+        .mui-control-item{
+            display: inline-block;
+            width: 4.666667rem;
+            height: 2.166667rem;
+            line-height: 2.166667rem;
+            text-align: center;
+            border: 1px solid #c3c4c5;
+            color: #666666;
+            font-size: 1.083333rem;
             .fl;
-            width: 33%;
-            a{
-                color: #65a2e6;
+            margin-right: 1.25rem;
+            background-color: #fff;
+        }
+        .mui-active{
+            color: #1e79e0;
+            border-color: #1e79e0;
+            position: relative;
+            background-color: #fff;
+            &:after{
+                content: "";
                 display: block;
-                font-size: 1.291667rem;
+                width: 0.541667rem;
+                height: 0.5rem;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                background-image: url(../img/youxiasanjiao.jpg);
+                .bgSize;
             }
         }
     }
@@ -1127,4 +1174,163 @@ input:focus {
     .mui-control-item{
         font-size: 1.291667rem;
     }   
+}
+.doctor_consult_tit{
+    overflow: hidden;
+    background-color: #efefef;
+    li{
+        overflow: hidden;
+        -moz-box-flex: 4;
+        -webkit-box-flex: 4;
+        box-flex: 4;
+        font-size: 0.875rem;
+        color: #919090;
+        height: 3.958333rem;
+        span{
+            display: block;
+            width: 1.35rem;
+            height: 1.35rem;
+            line-height: 1.458333rem;
+            .radius(50%);
+            text-align: center;
+            color: #fff;
+            background-color: #b0b0b0;
+            margin: 0.5rem auto 0.333333rem;
+            font-weight: bold;
+        }
+        &:after{
+            content: "";
+            display: block;
+            width: 0.458333rem;
+            height: 0.541667rem;
+            background-image: url(../img/right_icon.png);
+            .bgSize;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -0.541667rem/2;
+        }
+        &:last-child:after{
+            background-image:none;
+        }
+        &.active{
+            color: #4082e8;
+            span{
+                background-color: #4082e8;
+            }
+        }
+    }
+}
+.select_time{
+    padding: 0 0.416667rem;
+    .mui-segmented-control{
+        padding: 1.125rem 0;
+        overflow: hidden;
+        border: 0;
+        .mui-control-item{
+            width: 4.666667rem;
+            height: 2.166667rem;
+            line-height: 2.166667rem;
+            text-align: center;
+            border: 1px solid #c3c4c5;
+            color: #666666;
+            font-size: 1.083333rem;
+            .fl;
+            margin-right: 1.25rem;
+            background-color: #fff;
+        }
+        .mui-active{
+            color: #1e79e0;
+            border-color: #1e79e0;
+            position: relative;
+            background-color: #fff;
+            &:after{
+                content: "";
+                display: block;
+                width: 0.541667rem;
+                height: 0.5rem;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                background-image: url(../img/youxiasanjiao.jpg);
+                .bgSize;
+            }
+        }
+    }
+}
+.select_time_tit{
+    height: 3.166667rem;
+    line-height: 2.5;
+    color: #1e79e0;
+    font-size: 1.291667rem;
+    border-bottom: 0.125rem solid #bdddff;
+    position: relative;
+    span{
+        display: inline-block;
+        position: absolute;
+        height: 3.166667rem;
+        left: 0;
+        top: 0;
+        border-bottom: 0.125rem solid #1e79e0;
+    }
+}
+.order_form_box{
+    padding: 0 0.416667rem;
+    .order_form{
+        padding: 1.0rem 0.75rem 0;
+        .mui-btn-block{
+            height: 3.541667rem;
+            line-height: 3.541667rem;
+            background-color: #4082e8;
+            font-size: 1.416667rem;
+            padding: 0;
+            margin: 0.833333rem 0;
+        }
+    }
+}
+.mui-input-row{
+    height: 4.5rem;
+    input,select.mui-btn{
+        width: 100%;
+        height: 3.125rem;
+        line-height: 3.125rem;
+        color: #666666;
+        font-size: 1.125rem;
+        float: none;
+    }
+    .mui-btn{
+        padding: 0 15px;
+    }
+    .select_icon{
+        border: 0.083333rem solid #d0d2d6;
+        &:after{
+            top: 1.5rem;
+        }
+    }
+}
+#textarea{
+    color: #666666;
+    font-size: 1.125rem;
+}
+input:-moz-placeholder,textarea:-moz-placeholder {
+    color: #666666;
+}
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
+    color: #666666;
+}
+.order_form_tit{
+    color: #424242;
+    p{
+        font-size: 1.0rem;
+        line-height: 1.666667rem;
+        strong{
+            color: #424242;
+            font-size: 1.166667rem;
+            .iconfont{
+                margin-right: 0.5rem;
+                color: #e95d09;
+                font-size: 2.083333rem;
+            }
+        }
+    }
 }
