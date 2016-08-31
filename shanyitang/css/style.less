@@ -1683,4 +1683,42 @@ textarea::-webkit-input-placeholder {
         }
     }
 }
-
+.case_list{
+    .mui-table-view-cell{
+        margin: 0;
+        white-space: normal;
+        text-overflow: normal;
+        dl{
+            padding: 0.3rem 0;
+            overflow: hidden;
+            dt{
+                font-size: 1.083333rem;
+                color: #333333;
+                line-height: 2.083333rem;
+            }
+            dd{
+                line-height: 2.083333rem;
+                font-size: 0.875rem;
+                color: #666666;
+                span{
+                    margin-right: 1.666667rem;
+                }
+            }
+        }
+        &:after{
+            left: 0;
+        }
+    }
+}
+.case_item{
+    padding: 0.416667rem 0.833333rem;
+    line-height: 2.916667rem;
+    dt{
+        color: #333333;
+        font-size: 1.25rem;
+    }
+    dd{
+        color: #666666;
+        font-size: 1.083333rem;
+    }
+}
