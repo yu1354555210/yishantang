@@ -137,7 +137,7 @@
     }
 }
 .fm_news{
-    padding: 0.416667rem 0.708333rem 4rem;
+    padding: 0.416667rem 0.708333rem 5rem;
     overflow: hidden;
     a{
         display: block;
@@ -187,15 +187,21 @@
         font-size: 0.916667rem;
         a{
             color: #000;
+            display: block;
         }
         span{
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            vertical-align: top;
             font-size: 1.55rem;
             margin-right: 1rem;
         }
     }
 }
-.fs_news_pad{
+.fs_news_pad,.person_pad{
     padding-bottom: 5rem;
+    overflow: hidden;
 }
 .zl_form{
     padding: 1.666667rem 0.75rem 5rem;
@@ -249,6 +255,8 @@
                 font-size: 1rem;
                 font-weight: normal;
                 margin-bottom: 0.416667rem;
+                overflow: hidden;
+                white-space: nowrap;
                 a{
                     color: #1d1d1d;
                 }
@@ -265,7 +273,7 @@
             }
             p:last-child{
                 .see_more{
-                    margin-top: 0.616667rem;
+                    margin-top: 0.416667rem;
                     .fl;
                     font-size: 1.083333rem;
                     color: #fb7000;
@@ -280,6 +288,64 @@
                     padding: 0;
                     background-color: #3276c4;
                 }
+            }
+        }
+        &:last-child{
+            border-bottom: 0;
+        }
+    }
+}
+.sd_nav_list{
+    padding: 1.666667rem 0.75rem 5rem;
+    overflow: hidden;
+    li{
+        width: 100%;
+        height: 4.833333rem;
+        line-height: 4.833333rem;
+        font-size: 1.166667rem;
+        position: relative;
+        color: #1e79e0;
+        background-color: #e5e9f0;
+        margin-bottom: 1.041667rem;
+        img{
+            width: 3.25rem;
+            height: 3.25rem;
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            margin: 0 1.166667rem 0 2.083333rem;
+        }
+    }
+}
+.person_head{
+    .person_dl_gy{
+        .person_dd_name{
+            line-height: 2rem;
+        }
+        .person_dd_post,.person_dd_other{
+            color: #787878;
+            font-size: 0.875rem;
+            line-height: 1.2rem;
+        }
+    }
+}
+.health_box{
+    padding: 1.083333rem 1.083333rem 0.5rem;
+    border-bottom: 1px solid #ececec;
+    .health_list{
+        overflow: hidden;
+        li{
+            .fl;
+            width: 11.791667rem;
+            margin: 0 0.916667rem 0.416667rem 0;
+            text-align: center;
+            font-size: 0.916667rem;
+            span{
+                display: block;
+                line-height: 2.416667rem;
+            }
+            &:nth-child(2n){
+                margin-right: 0;
             }
         }
     }
