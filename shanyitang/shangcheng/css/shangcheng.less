@@ -204,4 +204,202 @@
 .sc_pad{
 	padding-bottom: 5rem;
 	overflow: hidden;
+	.sc_tab_hd{
+		background-color: #fff;
+		padding: 0 1.541667rem;
+		.mui-segmented-control{
+		}
+		.mui-control-item{
+			height: 3.458333;
+			line-height: 3.458333rem;
+			font-size: 1.083333rem;
+			color: #1e79e0;
+			&.mui-active{
+				border-bottom-width: 0.333333rem;
+			}
+		}
+	}
+	.sc_tab_bd{
+		.card_list{
+			margin-bottom: 1rem;
+		}
+	}
+}
+.sc_buy_bar{
+	.mui-icon,.mui-tab-label{
+		color: #373737;
+	}
+	.sc_praise{
+		.mui-icon{
+			font-size: 1.2rem;
+		}
+		&.mui-active{
+			.mui-icon{
+				&:before{
+					color: #f00;
+					content: "\e640";
+				}
+			}
+			.mui-tab-label{
+				color: #f00;
+			}
+		}
+	}
+	.sc_buy_btn{
+		background-color: #f00;
+		color: #fff;
+		font-size: 1.083333rem;
+		&.mui-active,.mui-tab-label{
+			color: #fff;
+		}
+	}	
+}
+.sc_video_box{
+	padding: 0.666667rem;
+	overflow: hidden;
+	position: relative;
+	i{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		-webkit-transform: translate(-50% -50%);
+		font-size: 2.5rem;
+		color: #fff;
+	}
+}
+.mod_shadow{
+	padding: 0.5rem 0.75rem;
+	overflow: hidden;
+	border: 1px solid #cacaca;
+	border-width: 1px 0;
+	h3{
+		line-height: 2rem;
+		font-weight: normal;
+		span{
+			color: #999999;
+			font-size: 0.875rem;
+			.fr;
+		}
+	}
+	h4{
+		font-weight: normal;
+		color: #ff0000;
+		font-size: 1.083333rem;
+		line-height: 2rem;
+		span{
+			font-size: 0.875rem;
+		}
+	}
+	p{
+		color: #6e6e6e;
+		font-size: 0.708333rem;
+		line-height: 1.2rem;
+	}
+}
+.blank{
+	height: 0.541667rem;
+	background-color: #f6f6f6;
+}
+.commodity_txt_box{
+	.mui-control-item{
+		line-height: 2.083333rem;
+	}
+	.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+		border-bottom: 0.208333rem solid #fbd13f;
+		color: #373737;
+	}
+	.command_item{
+		padding: 1.166667rem;
+		overflow: hidden;
+	}
+	.command_txt p{
+		color: #373737;
+		font-size: 0.875rem;
+		line-height: 1.5rem;
+	}
+}
+.evaluate{
+	h3{
+		line-height: 2.708333rem;
+		font-size: 0.875rem;
+		font-weight: normal;
+		color: #575757;
+		border-bottom: 1px solid #c4c4c4;
+	}
+	li{
+		border-bottom: 1px solid #c4c4c4;
+		padding: 0.833333rem 0;
+		overflow: hidden;
+		.evaluate_txt{
+			line-height: 1.041667rem;
+			.fl;
+			width: 70%;
+			min-height: 2.583333rem;
+			overflow: hidden;
+			display:flex;
+			display: -webkit-flex;
+			align-items: center;
+			font-size: 0.666667rem;
+		}
+		.evaluate_other{
+			.fr;
+			width: 25%;
+			font-size: 0.625rem;
+			color: #919191;
+			line-height: 1.25rem;
+			text-align: right;
+			.evaluate_name{
+				margin-right: 0.5rem;
+			}
+		}
+	}
+}
+.comment_box{
+	display: none;
+	height: 4.833333rem;
+	background-color: #f5f5f5;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 666;
+	.comment_input_group{
+		padding: 0 0.75rem;
+		overflow: hidden;
+	}
+	.comment_close{
+		position: absolute;
+		right: 0.75rem;
+		top: 0.416667rem;
+		i{
+			font-size: 1.3rem;
+			color: #999999;
+		}
+	}
+	.comment_input{
+		margin-top: 1.875rem;
+		padding: 0;
+		background-color: transparent;
+		position: relative;
+		input{
+			width: 100%;
+		}
+		.comment_btn{
+			width: 3.333333rem;
+			text-align: center;
+			height: 2.416667rem;
+			line-height: 2.416667rem;
+			color: #333;
+			position: absolute;
+			right: 0;
+			top: 0;
+			background-image: none;
+			padding: 0;
+			&:active{
+				background: none;
+				border: 0;
+			}
+		}
+	}
 }
