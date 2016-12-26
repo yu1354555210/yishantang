@@ -18,19 +18,19 @@
 		<div class="wrapper">
 			<div class="sc_buy_bar">
 				<nav class="mui-bar mui-bar-tab bottom_bar">
-					<a class="mui-tab-item mui-active">
+					<a class="sc_tab_item">
 						<span class="mui-icon iconfont icon-home"></span>
 						<span class="mui-tab-label">商城</span>
 					</a>
-					<a class="mui-tab-item sc_praise" id="js_sc_praise">
+					<a class="sc_praise sc_tab_item" id="js_sc_praise">
 						<span class="mui-icon iconfont icon-praise-copy"></span>
 						<span class="mui-tab-label">关注</span>
 					</a>
-					<a class="mui-tab-item sc_comment" id="js_comment">
+					<a class="sc_comment sc_tab_item" id="js_comment">
 						<span class="mui-icon iconfont icon-bianji"></span>
 						<span class="mui-tab-label">评论</span>
 					</a>
-					<a class="mui-tab-item sc_buy_btn">
+					<a class="sc_buy_btn sc_tab_item">
 						<span class="mui-tab-label">立即购买</span>
 					</a>
 					<div class="comment_box" id="js_comment_box">
@@ -111,12 +111,22 @@
 			mui.init();
 
 			$(function(){
-				$('.comment_close').click(function(){
+				$('.comment_close').on('tap',function(){
 					$('.comment_box').hide();
 				});
 
 				$('#js_comment').on('tap',function(){
 					$('.comment_box').show();
+				});
+				
+				$("#js_sc_praise").on('tap',function(){
+					$(this).toggleClass("mui-active");
+					var msg = $(this).find(".mui-tab-label");
+					if($(this).hasClass("mui-active")){
+						msg.html("取消关注");
+					}else{
+						msg.html("关注");
+					}
 				});
 			});
 

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, width=device-width" />
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="Cache-Control" content="no-transform " />
+		<title>医善堂</title>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_s2fgel84qjwi2j4i.css" />
+		<link rel="stylesheet" href="css/shangcheng.css">
+		<script src="../js/fontrem.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="sc_buy_bar sc_total">
+				<nav class="mui-bar mui-bar-tab bottom_bar">
+					<a href="#" class="sc_total_item">合计：<span>1010元</span></a>
+					<a class="sc_buy_btn sc_tab_item">
+						<span class="mui-tab-label">立即购买</span>
+					</a>
+				</nav>
+			</div>
+			<div class="sc_pad">
+				<header id="header" class="mui-bar-nav">
+					<h1 class="mui-title">购买详情</h1>
+					<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				</header>
+				<div class="video_details">
+					<dl>
+						<dt><img src="img/video_img.jpg"/></dt>
+						<dd>
+							<h3>心理学培训视频</h3>
+							<p>￥500元</p>
+						</dd>
+					</dl>
+				</div>
+				<div class="sc_numbox">
+					<label>购买数量</label>
+					<div class="mui-numbox" data-numbox-min='1'>
+						<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+						<input id="test" class="mui-input-numbox" type="number" value="5" />
+						<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+					</div>
+				</div>
+				<div class="address_box">
+					<div class="address_tit buy_tit">收货地址</div>
+					<div class="address_view">
+						<ul class="mui-table-view mui-table-view-radio">
+							<!--怎么选取看下方js-->
+							<li class="mui-table-view-cell mui-selected">
+								<a class="mui-navigate-right">沈阳市皇姑区黄河北大街120号</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right">沈阳市沈河区北站路100号</a>
+							</li>
+						</ul>
+						<div class="address_addicon"><i class="iconfont icon-jiahao1"></i></div>
+						<div class="address_input">
+							<input type="text" id="js_address_addinput" placeholder="添加您的收货地址" name="" id="" value="12" />
+							<input class="mui-btn mui-btn-primary" id="js_address_addbtn" type="button" value="确认" />
+						</div>
+					</div>
+				</div>
+				<div class="express_box">
+					<div class="buy_tit">邮寄方式</div>
+					<ul class="mui-table-view mui-table-view-radio">
+						<li class="mui-table-view-cell mui-selected">
+							<a class="mui-navigate-right"><label>快递</label><span>运费<i>10元</i></span></a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right"><label>线上体验</label><span>运费<i>0元</i></span></a>
+						</li>
+					</ul>
+				</div>
+				<div class="express_box">
+					<div class="buy_tit">选择支付方式</div>
+					<ul class="mui-table-view mui-table-view-radio">
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">沈阳市皇姑区黄河北大街120号</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">沈阳市沈河区北站路100号</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">沈阳市沈河区北站路100号</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			//单选获取值示例  在控制台查看
+			document.querySelector('.mui-table-view.mui-table-view-radio').addEventListener('selected', function(e) {
+				console.log("当前选中的为：" + e.detail.el.innerText)
+			});
+
+			$(function() {
+				$(".address_tit").on("tap", function() {
+					$(this).toggleClass("active");
+					$(".address_view").toggle();
+				});
+
+				$(".address_addicon").on("tap", function() {
+					$(".address_input").show();
+				});
+
+				var addInput = $("#js_address_addinput"),
+					addBtn = $("#js_address_addbtn");
+
+				addBtn.on('tap', function() {
+					var zhtml = "";
+					zhtml += "<li class='mui-table-view-cell'>";
+					zhtml += "<a class='mui-navigate-right'>" + addInput.val() + "</a>";
+					zhtml += "</li>";
+					$(".address_view ul").prepend(zhtml);
+				});
+
+			})
+		</script>
+	</body>
+
+</html>
