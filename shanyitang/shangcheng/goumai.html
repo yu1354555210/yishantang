@@ -9,7 +9,7 @@
 		<title>医善堂</title>
 		<link href="../css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="../css/style.css" />
-		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_s2fgel84qjwi2j4i.css" />
+		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_ot776hkyqf7s0pb9.css" />
 		<link rel="stylesheet" href="css/shangcheng.css">
 		<script src="../js/fontrem.js" type="text/javascript" charset="utf-8"></script>
 	</head>
@@ -42,7 +42,7 @@
 					<label>购买数量</label>
 					<div class="mui-numbox" data-numbox-min='1'>
 						<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
-						<input id="test" class="mui-input-numbox" type="number" value="5" />
+						<input id="test" class="mui-input-numbox" type="number" value="1" />
 						<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
 					</div>
 				</div>
@@ -60,7 +60,7 @@
 						</ul>
 						<div class="address_addicon"><i class="iconfont icon-jiahao1"></i></div>
 						<div class="address_input">
-							<input type="text" id="js_address_addinput" placeholder="添加您的收货地址" name="" id="" value="12" />
+							<input type="text" id="js_address_addinput" placeholder="添加您的收货地址" name="" id="" value="" />
 							<input class="mui-btn mui-btn-primary" id="js_address_addbtn" type="button" value="确认" />
 						</div>
 					</div>
@@ -76,17 +76,23 @@
 						</li>
 					</ul>
 				</div>
-				<div class="express_box">
+				<div class="pay_box">
 					<div class="buy_tit">选择支付方式</div>
 					<ul class="mui-table-view mui-table-view-radio">
-						<li class="mui-table-view-cell">
-							<a class="mui-navigate-right">沈阳市皇姑区黄河北大街120号</a>
+						<li class="mui-table-view-cell mui-selected">
+							<a class="mui-navigate-right">
+								<span class="iconfont icon-zhifubao"></span>支付宝
+							</a>
 						</li>
 						<li class="mui-table-view-cell">
-							<a class="mui-navigate-right">沈阳市沈河区北站路100号</a>
+							<a class="mui-navigate-right">
+								<span class="iconfont icon-weixinzhifu"></span>微信支付
+							</a>
 						</li>
 						<li class="mui-table-view-cell">
-							<a class="mui-navigate-right">沈阳市沈河区北站路100号</a>
+							<a class="mui-navigate-right">
+								<span class="iconfont icon-yinhangka"></span>银行转账
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -119,7 +125,11 @@
 					zhtml += "<li class='mui-table-view-cell'>";
 					zhtml += "<a class='mui-navigate-right'>" + addInput.val() + "</a>";
 					zhtml += "</li>";
-					$(".address_view ul").prepend(zhtml);
+					if(addInput.val() != ""){
+						$(".address_view ul").prepend(zhtml);
+					}else{
+						alert("收货地址不能为空");
+					}
 				});
 
 			})

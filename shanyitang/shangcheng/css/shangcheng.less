@@ -248,9 +248,9 @@
     .sc_buy_btn {
         background-color: #f00;
         color: #fff;
-        font-size: 1.083333rem;
         &.mui-active,
         .mui-tab-label {
+            font-size: 1rem !important;
             color: #fff;
         }
     }
@@ -274,7 +274,7 @@
             padding-bottom: 10px;
         }
         .mui-tab-label {
-            font-size: 11px;
+            font-size: 20px;
             display: block;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -481,9 +481,7 @@
     overflow: hidden;
     border-bottom: 1px solid @borColor;
     label {
-        line-height: 1.1;
         float: left;
-        width: 35%;
         padding: 0.416666rem 0;
         font-size: 1.083333rem;
         color: #555555;
@@ -569,7 +567,7 @@
         }
     }
 }
-.express_box{
+.express_box,.pay_box{
     ul{
         &:after{
             height: 0;
@@ -602,5 +600,19 @@
     }
     &:after{
         height: 0;
+    }
+}
+.pay_box{
+    .iconfont{
+        font-size: 1.5rem;
+        margin: 0 0.833333rem;
+        position: relative;
+        top: 0.2rem;
+    }
+    .icon-zhifubao,.icon-yinhangka{
+        color: #00aaee;
+    }
+    .icon-weixinzhifu{
+        color: #00c901;
     }
 }

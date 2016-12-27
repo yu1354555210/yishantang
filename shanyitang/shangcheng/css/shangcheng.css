@@ -239,10 +239,10 @@
 .sc_buy_bar .sc_buy_btn {
   background-color: #f00;
   color: #fff;
-  font-size: 1.083333rem;
 }
 .sc_buy_bar .sc_buy_btn.mui-active,
 .sc_buy_bar .sc_buy_btn .mui-tab-label {
+  font-size: 1rem !important;
   color: #fff;
 }
 .sc_buy_bar .sc_tab_item {
@@ -266,7 +266,7 @@
   padding-bottom: 10px;
 }
 .sc_buy_bar .sc_tab_item .mui-tab-label {
-  font-size: 11px;
+  font-size: 20px;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -468,9 +468,7 @@
   border-bottom: 1px solid #c9c9c9;
 }
 .sc_numbox label {
-  line-height: 1.1;
   float: left;
-  width: 35%;
   padding: 0.416666rem 0;
   font-size: 1.083333rem;
   color: #555555;
@@ -551,29 +549,49 @@
   top: 0;
   background-color: #ccc;
 }
-.express_box ul:after {
+.express_box ul:after,
+.pay_box ul:after {
   height: 0;
 }
-.express_box ul li.mui-table-view-cell > a:not(.mui-btn) {
+.express_box ul li.mui-table-view-cell > a:not(.mui-btn),
+.pay_box ul li.mui-table-view-cell > a:not(.mui-btn) {
   padding: 1rem 15px;
 }
-.express_box .mui-table-view-cell {
+.express_box .mui-table-view-cell,
+.pay_box .mui-table-view-cell {
   border-bottom: 1px solid #c9c9c9;
   font-size: 1.083333rem;
 }
-.express_box .mui-table-view-cell:after {
+.express_box .mui-table-view-cell:after,
+.pay_box .mui-table-view-cell:after {
   height: 0;
 }
-.express_box .mui-table-view-cell a label {
+.express_box .mui-table-view-cell a label,
+.pay_box .mui-table-view-cell a label {
   width: 6.666666rem;
   display: inline-block;
   padding-left: 0.416666rem;
 }
-.express_box .mui-table-view-cell a span i {
+.express_box .mui-table-view-cell a span i,
+.pay_box .mui-table-view-cell a span i {
   font-style: normal;
   color: #f62b2b;
 }
-.express_box:after {
+.express_box:after,
+.pay_box:after {
   height: 0;
+}
+.pay_box .iconfont {
+  font-size: 1.5rem;
+  margin: 0 0.833333rem;
+  position: relative;
+  top: 0.2rem;
+}
+.pay_box .icon-zhifubao,
+.pay_box .icon-yinhangka {
+  color: #00aaee;
+}
+.pay_box .icon-weixinzhifu {
+  color: #00c901;
 }
 /*# sourceMappingURL=shangcheng.css.map */
