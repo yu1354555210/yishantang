@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, width=device-width" />
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="Cache-Control" content="no-transform " />
+		<title>医善堂</title>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_ot776hkyqf7s0pb9.css" />
+		<link rel="stylesheet" href="css/shangcheng.css">
+		<script src="../js/fontrem.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="sc_pad">
+				<header id="header" class="mui-bar-nav">
+					<h1 class="mui-title">收费</h1>
+					<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				</header>
+				<div class="charge_table">
+					<table>
+						<tr>
+							<th width="60"></th>
+							<th class="mui-text-left">应缴款项</th>
+							<th>应缴费用</th>
+							<th>缴费</th>
+						</tr>
+						<tr>
+							<td>
+								<div class="mui-input-row mui-checkbox mui-left">
+									<input name="checkbox" value="Item 1" type="checkbox">
+								</div>
+							</td>
+							<td class="mui-text-left">7月份住院费</td>
+							<td><span>￥1655元</span></td>
+							<td>
+								<a href="#">缴费</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="mui-input-row mui-checkbox mui-left">
+									<input name="checkbox" value="Item 1" type="checkbox">
+								</div>
+							</td>
+							<td class="mui-text-left">7月心理治疗费用</td>
+							<td><span>￥1655元</span></td>
+							<td>
+								<a href="#">缴费</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="mui-input-row mui-checkbox mui-left">
+									<input name="checkbox" value="Item 1" type="checkbox">
+								</div>
+							</td>
+							<td class="mui-text-left">7月份住院费</td>
+							<td><span>￥1655元</span></td>
+							<td>
+								<a href="#">缴费</a>
+							</td>
+						</tr>
+						<tr style="height: 6rem;">
+							<td>
+								<div class="mui-input-row mui-checkbox mui-left">
+									<input name="checkbox2" value="Item 1" type="checkbox" class="check_all">
+								</div>
+							</td>
+							<td class="mui-text-left">全部缴费</td>
+							<td colspan="2">
+								<div class="sum_total">总金额: <span>￥562124元</span></div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="pay_box">
+					<div class="buy_tit charge_tit">选择支付方式</div>
+					<ul class="mui-table-view mui-table-view-radio">
+						<li class="mui-table-view-cell mui-selected">
+							<a class="mui-navigate-right">
+								<span class="iconfont icon-zhifubao"></span>支付宝
+							</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">
+								<span class="iconfont icon-weixinzhifu"></span>微信支付
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="calendar_btn">
+					<button type="button" class="mui-btn mui-btn-danger mui-btn-block">确认缴费 ￥1655元</button>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			//单选获取值示例  在控制台查看
+			document.querySelector('.mui-table-view.mui-table-view-radio').addEventListener('selected', function(e) {
+				console.log("当前选中的为：" + e.detail.el.innerText)
+			});
+
+			$(function() {
+				$(".check_all").click(function() {
+					if($(this).is(":checked")){
+						$("input[name='checkbox']").prop("checked",true);
+						$(".sum_total").show();
+					}else{
+						$("input[name='checkbox']").prop("checked",false);
+						$(".sum_total").hide();
+					}
+				});
+				
+				$("input[name='checkbox']").each(function(i){
+					$(this).click(function(){
+						if($("input[name='checkbox']").length == $("input[name='checkbox']:checked").length){
+							$(".check_all").prop("checked",true);
+							$(".sum_total").show();
+						}else{
+							$(".check_all").prop("checked",false);
+							$(".sum_total").hide();
+						}
+					})
+				})
+			})
+		</script>
+	</body>
+
+</html>

@@ -616,3 +616,69 @@
         color: #00c901;
     }
 }
+.charge_table{
+    table{
+        width: 100%;
+        tr{
+            border-bottom: 1px solid #e8e8e8;
+            td,th{
+                height: 3.041666rem;
+                vertical-align: middle;
+                font-size: 1.083333rem;
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            th{
+                background-color: #e1f2fc;
+                color: #4c96eb;
+                font-weight: normal;
+            }
+            td{
+                max-width: 10.833333rem;
+                color: #333333;
+                .mui-checkbox input[type=checkbox]{
+                    top: 50%;
+                    transform: translateY(-50%);
+                    line-height: normal;
+                    font-size: initial;
+                    &:before{
+                        font-size: 1.166666rem;
+                    }
+                }
+                span{
+                    color: #eaab24;
+                }
+                a{
+                    display: block;
+                    margin: 0 auto;
+                    width: 3.958333rem;
+                    height: 1.833333rem;
+                    line-height: 1.833333rem;
+                    .radius(0.4rem);
+                    text-align: center;
+                    color: #fff;
+                    background-color: #f15214;
+                }
+                .sum_total{
+                    display: none;
+                }
+            }
+        }
+    }
+    .mui-input-row {
+        height: 100%;
+    }
+}
+.charge_tit{
+    margin: 0;
+}
+.calendar_btn{
+    padding: 3.041666rem 0.75rem 0;
+    .mui-btn{
+        height: 3.541666rem;
+        font-size: 1.291666rem;
+        background-color: #f15214;
+    }
+}
